@@ -69,3 +69,24 @@ const performOperation = (clickObj) =>{
            calcOperatorBtns[i].addEventListener('click', performOperation, false);
     }
 }
+
+clearBtn.onclick = () =>{
+	displayVal = "0";
+	pendingVal = undefined;
+	evalStringArray = [];
+	displayValElement.innerText = displayVal;
+};
+
+backSpaceBtn.onclick = () =>{
+	let lenghtOfDisplayVal = displayVal.length;
+	displayVal = displayVal.slice(0, lenghtOfDisplayVal - 1);
+	if(displayVal === "")
+		displayVal = '0';
+	  displayValElement.innerText = displayVal;
+}
+
+decimalBtn.onclick = () => {
+	if(!displayVal.includes("."))
+		displayVal += ".";
+	  displayValElement.innerText = displayVal;
+}
