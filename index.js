@@ -4,3 +4,7 @@ let backSpaceBtn = document.getElementById('calc-backspace');
 let decimalBtn = document.getElementById('calc-decimal');
 let calcNumBtns = document.getElementsByClassName('calc-num-btn');
 let calcOperatorBtns = document.getElementsByClassName('calc-btn-operator');
+
+let displayVal = '0';
+let pendingVal;
+let evalStringArray = [];
