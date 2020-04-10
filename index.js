@@ -59,5 +59,13 @@ const performOperation = (clickObj) =>{
 
 		default:
 			break;
-	}
+    }
+
+    for(let i=0; i < calcNumBtns.length; i++){
+        calcNumBtns[i].addEventListener('click', updateDisplayVal, false);
+    }
+
+    for(let i=0; i < calcOperatorBtns.length; i++){
+           calcOperatorBtns[i].addEventListener('click', performOperation, false);
+    }
 }
