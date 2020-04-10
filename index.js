@@ -8,3 +8,11 @@ let calcOperatorBtns = document.getElementsByClassName('calc-btn-operator');
 let displayVal = '0';
 let pendingVal;
 let evalStringArray = [];
+
+const updateDisplayVal = (clickObj) => {
+	let btnText = clickObj.target.innerText;
+	if(displayVal === "0")
+		 displayVal = '';
+		 displayVal += btnText;
+	   displayValElement.innerText = displayVal;
+}
