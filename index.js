@@ -76,3 +76,11 @@ clearBtn.onclick = () =>{
 	evalStringArray = [];
 	displayValElement.innerText = displayVal;
 };
+
+backSpaceBtn.onclick = () =>{
+	let lenghtOfDisplayVal = displayVal.length;
+	displayVal = displayVal.slice(0, lenghtOfDisplayVal - 1);
+	if(displayVal === "")
+		displayVal = '0';
+	  displayValElement.innerText = displayVal;
+}
