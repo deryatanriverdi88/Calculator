@@ -69,3 +69,10 @@ const performOperation = (clickObj) =>{
            calcOperatorBtns[i].addEventListener('click', performOperation, false);
     }
 }
+
+clearBtn.onclick = () =>{
+	displayVal = "0";
+	pendingVal = undefined;
+	evalStringArray = [];
+	displayValElement.innerText = displayVal;
+};
