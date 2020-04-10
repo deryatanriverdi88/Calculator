@@ -84,3 +84,9 @@ backSpaceBtn.onclick = () =>{
 		displayVal = '0';
 	  displayValElement.innerText = displayVal;
 }
+
+decimalBtn.onclick = () => {
+	if(!displayVal.includes("."))
+		displayVal += ".";
+	  displayValElement.innerText = displayVal;
+}
