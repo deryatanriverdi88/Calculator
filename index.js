@@ -16,3 +16,48 @@ const updateDisplayVal = (clickObj) => {
 		 displayVal += btnText;
 	   displayValElement.innerText = displayVal;
 }
+
+const performOperation = (clickObj) =>{
+	let operator = clickObj.target.innerText;
+	switch(operator){
+		case "+":
+			pendingVal = displayVal;
+			displayVal = "0" ;
+			displayValElement.innerText = displayVal;
+			evalStringArray.push(pendingVal);
+			evalStringArray.push("+");
+			break;
+
+		case "-":
+			pendingVal = displayVal;
+			displayVal = "0" ;
+			displayValElement.innerText = displayVal;
+			evalStringArray.push(pendingVal);
+			evalStringArray.push("-");
+			break;
+		case "x":
+			pendingVal = displayVal;
+			displayVal = "0";
+			displayValElement.innerText = displayVal;
+			evalStringArray.push(pendingVal);
+			evalStringArray.push("*");
+			break;
+		case "÷":
+			pendingVal = displayVal;
+			displayVal = "0" ;
+			displayValElement.innerText = displayVal;
+			evalStringArray.push(pendingVal);
+			evalStringArray.push("/");
+			break;
+		case "=":
+			evalStringArray.push(displayVal);
+			let evaluation = eval(evalStringArray.join(" "));
+			displayVal = evaluation + "" ;
+			displayValElement.innerText = displayVal;
+			evalStringArray =[];
+			break;
+
+		default:
+			break;
+	}
+}
